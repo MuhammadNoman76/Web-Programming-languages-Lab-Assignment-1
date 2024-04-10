@@ -7,221 +7,7 @@
     <title>Home Page</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            background: url(background3.jpg) no-repeat;
-            background-color: rgb(0, 85, 164);
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Header Section */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 15%;
-            width: 100%;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            z-index: 100;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            padding-top: 5px;
-            width: 100px;
-            height: 100px;
-            background-image: url('logo.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            font-weight: bold;
-        }
-
-        .navbar a {
-            font-size: 1rem;
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            padding: 25px;
-            transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
-            border-bottom: 2px solid transparent;
-            height: 160%;
-        }
-
-        .navbar a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: yellow;
-            border-bottom: 2px solid yellow;
-            height: 160%;
-        }
-
-        .navbar a.activebar {
-            background-color: rgba(0, 0, 0, 0.2);
-            color: yellow;
-            border-bottom: 2px solid yellow;
-            height: 160%;
-        }
-
-        .search-container {
-            margin-left: 0rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .search-container input[type="text"] {
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            width: 200px;
-        }
-
-        .search-icon {
-            margin-right: 1rem;
-            color: white;
-        }
-
-        .hamburger {
-            display: none;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            margin-bottom: 5px;
-            background-color: white;
-            transition: transform 0.5s ease;
-        }
-
-        /* Main Content */
-        main {
-            padding-top: 15%;
-            color: #fff;
-        }
-
-        /* Header Section */
-        .header-section {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .header-section h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .header-section p {
-            font-size: 1.2rem;
-            line-height: 1.5;
-        }
-
-        /* Section Styles */
-        section {
-            min-height: 100vh;
-            /* Set the minimum height of each section to 100vh (100% of the viewport height) */
-            padding: 2rem;
-            margin: 0;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            /* Vertically center the content within each section */
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        section p {
-            font-size: 1.1rem;
-            line-height: 1.5;
-            color: #ddd;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .navbar {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                height: 0;
-                background-color: rgba(0, 0, 0, 0.8);
-                backdrop-filter: blur(10px);
-                overflow: hidden;
-                transition: height 0.5s ease;
-                flex-direction: column;
-                justify-content: flex-start;
-            }
-
-            .navbar.open {
-                height: calc(100vh - 15%);
-            }
-
-            .navbar a {
-                display: block;
-                text-align: center;
-                margin: 1rem 0;
-            }
-
-            .search-container {
-                margin-left: 0;
-                margin-top: 1rem;
-                width: 100%;
-                justify-content: center;
-            }
-
-            .search-container input[type="text"] {
-                width: 80%;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            .hamburger.open span:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .hamburger.open span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.open span:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -268,8 +54,46 @@
         </section>
 
         <section id="projects">
-            <h2>Our Projects</h2>
-            <p>Check out our latest projects and see how we've helped businesses like yours achieve success.</p>
+           <div class="projects">
+            <h1 style="color: white; font-weight: BOLD; padding-top: 1rem;" align ="center"> OUR PROJECTS</h1>
+            <div class="project-row">
+                <div class="project-card">
+                    <img src="Assets/Chatboot.jpg" alt="Project 1">
+                    <h3>LSTM ATTENTION CHATBOT IN URDU</h3>
+                    <p class="cards">An auto-encoder Urdu chatbot using an attention mechanism with an LSTM model to answer
+                        university-related questions.</p>
+                </div>
+                <div class="project-card">
+                    <img src="Assets/library.jpg" alt="Project 2">
+                    <h3>LIBRARY MANAGEMENT SYSTEM</h3>
+                    <p class="cards">An advanced automated library management system using Java and Java Swing.</p>
+                </div>
+                <div class="project-card">
+                    <img src="Assets/autocodecorrection.jpg" alt="Project 3">
+                    <h3>AUTO PYTHON CODE CORRECTION</h3>
+                    <p class="cards">Automatic code correction for the Python language using an LLM BERT model.</p>
+                </div>
+            </div>
+            <div class="project-row">
+                <div class="project-card">
+                    <img src="Assets/BERT URDU CHATBOT.jpg" alt="Project 4">
+                    <h3>URDU CHATBOT USING BERT MODEL</h3>
+                    <p class="cards">An advanced conversational chatbot trained on a customized dataset that answers common questions.</p>
+                </div>
+                <div class="project-card">
+                    <img src="Assets/Sentimental Analysis.jpg" alt="Project 5">
+                    <h3>SENTIMENT ANALYSIS OF 10 SENTIMENTS IN URDU</h3>
+                    <p class="cards">A customized dataset in Urdu trained on a BERT LLM model that can identify over 10 sentiments.</p>
+                </div>
+                <div class="project-card">
+                    <img src="Assets/Search Engine.jpg" alt="Project 6">
+                    <h3>SEARCH ENGINE OPTIMIZATION ON SPECIFIC DATASET</h3>
+                    <p class="cards">A customized Urdu corpus used to build a search engine using indexing and an advanced BM25 ranking
+                        algorithm.</p>
+                </div>
+            </div>
+           </div>
+
         </section>
 
         <section id="services">
@@ -279,38 +103,37 @@
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch with us today to learn more about how we can help you achieve your objectives. Our team is
-                ready to assist you every step of the way.</p>
+
+            <div class="blur-container">
+                <form action="">
+                    <h2>Contact Us</h2>
+                    <div>
+                        <label class="labels_style" for="name">Your Name: </label>
+                        <input type="text" name="myName" id="name" class="input" placeholder="  Enter Your Name">
+                    </div>
+                    <div>
+                        <label class="labels_style" for="email">Your Email:</label>
+                        <input type="email" name="myEmail" id="email" class="input" placeholder="  Enter Your Email">
+                    </div>
+                    <div>
+                        <label class="labels_style" for="subject">Subject:</label>
+                        <input type="text" name="mySubject" id="subject" class="input" placeholder="  Enter Subject">
+                    </div>
+                    <div>
+                        <label class="labels_style" for="message">Your Message: </label><br>
+                        <textarea name="myMessage" cols="60" rows="5" id="message" ></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Submit" class="button">
+                        <input type="reset" value="Reset" class="button">
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
 
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const navbar = document.querySelector('.navbar');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            navbar.classList.toggle('open');
-        });
-
-        // Smooth scrolling functionality
-        const navLinks = document.querySelectorAll('.navbar a');
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                const targetId = e.currentTarget.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                const headerHeight = document.querySelector('.header').offsetHeight;
-
-                window.scrollTo({
-                    top: targetElement.offsetTop - headerHeight,
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
+ 
 </body>
 
 </html>
