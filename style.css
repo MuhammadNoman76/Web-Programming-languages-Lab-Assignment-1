@@ -13,6 +13,7 @@ body {
     background-position: center;
 }
 
+
 .header {
     position: fixed;
     background-color: rgba(0, 56, 140, 0.2);
@@ -34,7 +35,8 @@ body {
 }
 
 .logo {
-    padding-top: 10px;
+    padding-top: 5px;
+    margin-top: 10px;
     width: 100px;
     height: 100px;
     background-image: url('Assets/logo.png');
@@ -215,17 +217,65 @@ body {
     font-family: Arial, sans-serif;
 }
 
+.table-container {
+    padding: 6rem;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+table {
+    width: 90%;
+    height: auto;
+    border-collapse: separate;
+    border-spacing: 0 0.3rem;
+}
+
+th,
+td {
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+}
+
+thead tr {
+    border-radius: 8px;
+}
+
+tbody tr {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+tbody tr:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
 .blur-container {
     backdrop-filter: blur(10px);
     background-color: rgba(16, 0, 240, 0.1);
     padding: 20px;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 800px;
     margin: 50px auto;
+    backdrop-filter: blur(30px);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    min-height: 70vh;
 }
 
-div {
+.div_contact {
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .input {
@@ -267,7 +317,7 @@ select {
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    margin-top: 0px;
+    margin-top: 1px;
     color: black;
 }
 
@@ -284,6 +334,7 @@ select {
 
 .project-card {
     max-width: 250px;
+    max-height: 500px;
     padding: 1rem;
     background-color: #f2f2f2;
     border-radius: 8px;
@@ -322,4 +373,41 @@ select {
         max-width: 250px;
         flex-shrink: 0;
     }
+
+       .table-container {
+            padding-top: 6rem;
+            margin: 0 auto; 
+        }
+
+        table {
+            width: 100%;
+            height: auto;
+            border-collapse: separate;
+            border-spacing: 0 0.3rem;
+        }
+
+        th,
+        td {
+            padding: 0.5rem;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        thead tr {
+            border-radius: 8px;
+        }
+
+        tbody tr {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.35);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        tbody tr:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
 }
