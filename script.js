@@ -1,56 +1,69 @@
-   const navLinks = document.querySelectorAll('.navbar a');
-   const sections = document.querySelectorAll('section');
+const navbar = document.querySelector('.navbar');
+const hamburger = document.querySelector('.hamburger');
+const body = document.querySelector('body');
 
-   navLinks.forEach(link => {
-       link.addEventListener('click', e => {
-           e.preventDefault();
-           const targetId = e.currentTarget.getAttribute('href');
 
-           // Remove active class from all links
-           navLinks.forEach(link => link.classList.remove('activebar'));
+hamburger.addEventListener('click', () => {
+    navbar.classList.toggle('open');
+    hamburger.classList.toggle('open');
+    body.classList.toggle('fixed');
+});
 
-           // Add active class to the clicked link
-           e.currentTarget.classList.add('activebar');
+body.addEventListener('click', (event) => {
+    if (!event.target.closest('.navbar') && !event.target.closest('.hamburger')) {
+        navbar.classList.remove('open');
+        hamburger.classList.remove('open');
+        body.classList.remove('fixed');
+    }
+});
 
-           // Scroll to the target section or top of the page
-           if (targetId === '#home') {
-               window.scrollTo({ top: 0, behavior: 'smooth' });
-           } else {
-               const targetElement = document.querySelector(targetId);
-               targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-           }
+const navLinks = document.querySelectorAll('.navbar a');
+const sections = document.querySelectorAll('section');
 
-           // Close the navigation menu on mobile
-           if (window.innerWidth <= 768) {
-               hamburger.classList.remove('open');
-               navbar.classList.remove('open');
-           }
-       });
-   });
+navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = e.currentTarget.getAttribute('href');
 
-   // Add event listener for scroll events
-   window.addEventListener('scroll', () => {
-       let currentSection = null;
+        navLinks.forEach(link => link.classList.remove('activebar'));
 
-       sections.forEach(section => {
-           const sectionTop = section.offsetTop - window.innerHeight / 2;
-           const sectionBottom = section.offsetTop + section.offsetHeight - window.innerHeight / 2;
+        e.currentTarget.classList.add('activebar');
 
-           if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionBottom) {
-               currentSection = section.id;
-           }
-       });
 
-       // Remove active class from all links
-       navLinks.forEach(link => link.classList.remove('activebar'));
+        if (targetId === '#home') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
 
-       // Add active class to the corresponding link
-       const activeLink = document.querySelector(`a[href="#${currentSection}"]`);
-       if (activeLink) {
-           activeLink.classList.add('activebar');
-       } else {
-           // If no section is active, add active class to the "Home" link
-           const homeLink = document.querySelector('a[href="#home"]');
-           homeLink.classList.add('activebar');
-       }
-   });
+
+        if (window.innerWidth <= 768) {
+            hamburger.classList.remove('open');
+            navbar.classList.remove('open');
+        }
+    });
+});
+
+window.addEventListener('scroll', () => {
+    let currentSection = null;
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - window.innerHeight / 2;
+        const sectionBottom = section.offsetTop + section.offsetHeight - window.innerHeight / 2;
+
+        if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionBottom) {
+            currentSection = section.id;
+        }
+    });
+
+    navLinks.forEach(link => link.classList.remove('activebar'));
+
+    const activeLink = document.querySelector(`a[href="#${currentSection}"]`);
+    if (activeLink) {
+        activeLink.classList.add('activebar');
+    } else {
+        const homeLink = document.querySelector('a[href="#home"]');
+        homeLink.classList.add('activebar');
+    }
+});
