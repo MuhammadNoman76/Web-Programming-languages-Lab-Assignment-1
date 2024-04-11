@@ -1,1 +1,192 @@
-# hello this is My Project
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <a href="#">
+                <div class="logo"></div>
+            </a>
+        </div>
+        <nav class="navbar">
+            <a href="#home" class="activebar">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contacts</a>
+        </nav>
+        <div class="search-container">
+            <i class='bx bx-search search-icon'></i>
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <main>
+        <div class="header-section" id="home">
+            <h1>Welcome to Our Website</h1>
+            <p>Welcome to my world of innovation! I'm Muhammad Noman, a final year student at Iqra University, Karachi,
+                passionate about merging Natural Language Processing (NLP) with Urdu language advancement. Explore with
+                me as I delve into NLP projects like Langchain and UrduLughaat, while crafting impactful digital
+                experiences through web development. Together, let's make a difference at the intersection of technology
+                and Urdu culture! </p>
+
+        </div>
+
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>Hey there! I'm Muhammad Noman, a final year student at Iqra University in Karachi, Pakistan. My
+                passion lies at the intersection of Natural Language Processing (NLP) and promoting Urdu
+                language and culture through innovative technologies.
+
+                Currently, I'm deeply involved in several NLP projects, including Langchain, where I explore the
+                intricacies of language processing. I work with large language models such as BERT, GPT, and
+                LAAMA to delve into the nuances of human language. One of my key endeavors is to leverage these
+                advancements to propel Urdu language forward in Pakistan. To facilitate this, I've developed
+                UrduLughaat, a comprehensive library tailored for preprocessing Urdu text, paving the way for
+                further exploration and utilization of Urdu in NLP applications.
+
+                Beyond NLP, I'm also passionate about web development. I'm constantly honing my skills in this
+                domain, seeking to create impactful digital experiences and solutions.
+
+                Join me on this journey as I combine my expertise in NLP, dedication to Urdu language advocacy,
+                and enthusiasm for web development to make meaningful contributions in the tech world and
+                beyond.</p>
+        </section>
+
+        <section id="projects">
+            <div class="projects">
+                <h1> OUR PROJECTS</h1>
+                <div class="project-row">
+                    <div class="project-card">
+                        <img src="Assets/Chatboot.jpg" alt="Project 1">
+                        <h3>LSTM ATTENTION CHATBOT IN URDU</h3>
+                        <p class="cards">An auto-encoder Urdu chatbot using an attention mechanism with an LSTM model to
+                            answer
+                            university-related questions.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="Assets/library.jpg" alt="Project 2">
+                        <h3>LIBRARY MANAGEMENT SYSTEM</h3>
+                        <p class="cards">An advanced automated library management system using Java and Java Swing.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="Assets/autocodecorrection.jpg" alt="Project 3">
+                        <h3>AUTO PYTHON CODE CORRECTION</h3>
+                        <p class="cards">Automatic code correction for the Python language using an LLM BERT model.</p>
+                    </div>
+                </div>
+                <div class="project-row">
+                    <div class="project-card">
+                        <img src="Assets/BERT URDU CHATBOT.jpg" alt="Project 4">
+                        <h3>URDU CHATBOT USING BERT MODEL</h3>
+                        <p class="cards">An advanced conversational chatbot trained on a customized dataset that answers
+                            common questions.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="Assets/Sentimental Analysis.jpg" alt="Project 5">
+                        <h3>SENTIMENT ANALYSIS OF 10 SENTIMENTS IN URDU</h3>
+                        <p class="cards">A customized dataset in Urdu trained on a BERT LLM model that can identify over
+                            10 sentiments.</p>
+                    </div>
+                    <div class="project-card">
+                        <img src="Assets/Search Engine.jpg" alt="Project 6">
+                        <h3>SEARCH ENGINE OPTIMIZATION ON SPECIFIC DATASET</h3>
+                        <p class="cards">A customized Urdu corpus used to build a search engine using indexing and an
+                            advanced BM25 ranking
+                            algorithm.</p>
+                    </div>
+                </div>
+        </section>
+
+        <section class="table-container" id="services">
+            <h2>Our Services</h2>
+            <table>
+
+                <tr>
+                    <th>Service</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>Database</td>
+                    <td>Design, develop, and manage efficient database systems for your business needs.</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Build responsive and user-friendly websites tailored to your brand and requirements.</td>
+                </tr>
+                <tr>
+                    <td>Chatbot Development</td>
+                    <td>Create intelligent chatbots to enhance customer experience and automate communication.</td>
+                </tr>
+                <tr>
+                    <td>AI Automation</td>
+                    <td>Streamline processes and boost productivity with AI-powered automation solutions.</td>
+                </tr>
+                <tr>
+                    <td>Machine Learning</td>
+                    <td>Leverage machine learning algorithms to extract valuable insights from data.</td>
+                </tr>
+                <tr>
+                    <td>Deep Learning</td>
+                    <td>Develop advanced deep learning models for complex tasks like image recognition and natural
+                        language
+                        processing.</td>
+                </tr>
+                <tr>
+                    <td>Natural Language Processing</td>
+                    <td>Unlock the power of human language with NLP techniques for text analysis and generation.</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="">
+                <div>
+                    <label class="labels_style" for="name">Your Name: </label>
+                    <input type="text" name="myName" id="name" class="input" placeholder="  Enter Your Name">
+                </div>
+                <div>
+                    <label class="labels_style" for="email">Your Email:</label>
+                    <input type="email" name="myEmail" id="email" class="input" placeholder="  Enter Your Email">
+                </div>
+                <div>
+                    <label class="labels_style" for="subject">Subject:</label>
+                    <input type="text" name="mySubject" id="subject" class="input" placeholder="  Enter Subject">
+                </div>
+                <div>
+                    <label class="labels_style" for="message">Your Message: </label><br>
+                    <textarea name="myMessage" cols="60" rows="5" id="message"></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Submit" class="button">
+                    <input type="reset" value="Reset" class="button">
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <div>
+                <p class="footer_text" s>&copy; 2024 Muhammad Noman. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+
+</body>
+
+</html>
