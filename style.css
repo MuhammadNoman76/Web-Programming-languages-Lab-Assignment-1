@@ -70,14 +70,14 @@ body {
     background-color: rgba(0, 36, 79, 0.2);
     color: yellow;
     border-bottom: 2px solid yellow;
-    height: 160%;
+    height: 100%;
 }
 
 .navbar a.activebar {
     background-color: rgba(0, 0, 0, 0.2);
     color: yellow;
     border-bottom: 2px solid yellow;
-    height: 160%;
+    height: 100%;
 }
 
 .search-container {
