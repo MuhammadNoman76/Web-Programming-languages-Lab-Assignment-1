@@ -63,7 +63,7 @@ body {
     padding: 25px;
     transition: background-color 0.3s ease, color 0.3s ease, border-bottom 0.3s ease;
     border-bottom: 2px solid transparent;
-    height: 160%;
+    height: 100%;
 }
 
 .navbar a:hover {
